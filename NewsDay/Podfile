@@ -6,27 +6,28 @@ target 'NewsDay' do
   use_frameworks!
 
   # Pods for NewsDay
-
-    pod 'Firebase'
-    pod 'Firebase/Core'
-    pod 'Firebase/Firestore'
-    pod 'Firebase/Analytics'
-    pod 'Firebase/Auth'
-    pod 'Kingfisher', '~> 5.0'
+  pod 'Firebase'
+  pod 'Firebase/Core'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Auth'
+  pod 'Kingfisher', '~> 5.0'
 end
 
 target 'NewsDay WatchKit App' do
+  platform :watchos, '4.0'
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
   # Pods for NewsDay WatchKit App
-
+  pod 'Kingfisher', '~> 5.0'
 end
 
 target 'NewsDay WatchKit Extension' do
+  platform :watchos, '4.0'
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
   # Pods for NewsDay WatchKit Extension
-
+  pod 'Kingfisher', '~> 5.0'
 end

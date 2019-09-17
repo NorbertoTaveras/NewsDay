@@ -10,7 +10,8 @@
 #endif
 #endif
 
+#import "Kingfisher.h"
 
-FOUNDATION_EXPORT double Pods_NewsDay_WatchKit_AppVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_NewsDay_WatchKit_AppVersionString[];
+FOUNDATION_EXPORT double KingfisherVersionNumber;
+FOUNDATION_EXPORT const unsigned char KingfisherVersionString[];
 
