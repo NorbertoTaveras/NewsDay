@@ -257,7 +257,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Source Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ov0-N0-T41">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Source Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ov0-N0-T41">
                                                     <rect key="frame" x="8" y="8" width="398" height="43.5"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -272,7 +272,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="sourceName" destination="ov0-N0-T41" id="wVc-Iv-n4B"/>
+                                            <outlet property="sourceName" destination="ov0-N0-T41" id="0Gb-mN-SdV"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -292,7 +292,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Sources" id="bBi-z9-v5g"/>
                     <connections>
-                        <outlet property="sourcesTableView" destination="LGd-TZ-5BZ" id="K5Y-bP-EOu"/>
+                        <outlet property="sourcesTableView" destination="LGd-TZ-5BZ" id="OdM-0Q-iTk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gvv-ct-xud" userLabel="First Responder" sceneMemberID="firstResponder"/>
