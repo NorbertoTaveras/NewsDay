@@ -1,47 +1,130 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14256" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="asV-6x-ivz">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14243"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14219"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14490.21"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
-        <scene sceneID="aou-V4-d1y">
+        <!--Primary Interface Controller-->
+        <scene sceneID="beU-ID-wbN">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
-            </objects>
-            <point key="canvasLocation" x="220" y="345"/>
-        </scene>
-        <!--Static Notification Interface Controller-->
-        <scene sceneID="AEw-b0-oYE">
-            <objects>
-                <notificationController id="YCC-NB-fut">
+                <controller id="asV-6x-ivz" customClass="PrimaryInterfaceController" customModule="NewsDay_WatchKit_Extension">
                     <items>
-                        <label alignment="left" text="Alert Label" numberOfLines="0" id="IdU-wH-bcW"/>
+                        <imageView alignment="left" contentMode="scaleAspectFit" id="Qb7-KM-Ufl"/>
+                        <button width="1" alignment="left" title="Headlines" id="hxR-ze-Jgl">
+                            <connections>
+                                <segue destination="Pj3-lD-avz" kind="push" identifier="headline0" id="xnS-it-sJ7"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Sources" id="mT4-49-3eU">
+                            <connections>
+                                <action selector="sourcesTapped" destination="asV-6x-ivz" id="b5X-to-xPT"/>
+                                <segue destination="MQ3-3M-OtO" kind="push" identifier="sourcesView" id="RdN-Pm-U6z"/>
+                            </connections>
+                        </button>
                     </items>
-                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-407" y="339"/>
+        </scene>
+        <!--Source Interface Controller-->
+        <scene sceneID="lV6-0c-xgs">
+            <objects>
+                <controller id="MQ3-3M-OtO" customClass="SourceInterfaceController" customModule="NewsDay_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="SXa-p5-mmb">
+                            <items>
+                                <tableRow identifier="sourceRow" id="hO0-1c-7Dn" customClass="SourceRowController" customModule="NewsDay_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" layout="vertical" id="uGR-bL-OSL">
+                                        <items>
+                                            <label width="1" height="1" alignment="left" text="Source" textAlignment="center" numberOfLines="0" id="3hE-qa-qYj"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="sourceName" destination="3hE-qa-qYj" id="HeH-Vr-hMb"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
                     <connections>
-                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
-                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
-                        <segue destination="eXb-UN-Cd0" kind="relationship" relationship="dynamicInteractiveNotificationInterface" id="mpB-YA-K8N"/>
+                        <outlet property="sourceTable" destination="SXa-p5-mmb" id="Jyl-rI-egS"/>
                     </connections>
-                </notificationController>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="643"/>
+            <point key="canvasLocation" x="-407" y="753"/>
         </scene>
-        <!--Notification Controller-->
-        <scene sceneID="ZPc-GJ-vnh">
+        <!--Headline0 Controller-->
+        <scene sceneID="KbF-LF-9dv">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="Pj3-lD-avz" customClass="Headline0Controller" customModule="NewsDay_WatchKit_Extension">
+                    <items>
+                        <imageView alignment="left" contentMode="scaleAspectFit" id="MeK-Hq-G1e"/>
+                        <label width="1" alignment="left" text="Title" textAlignment="center" id="N1A-gY-0Jh"/>
+                        <label width="1" height="0.55000000000000004" alignment="left" textAlignment="center" numberOfLines="0" id="ywA-gk-oXd">
+                            <mutableString key="text">Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+
+Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus. Donec id elit non mi porta gravida at eget metus.</mutableString>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="headlineDescription" destination="ywA-gk-oXd" id="cWj-3a-TZf"/>
+                        <outlet property="headlineImage" destination="MeK-Hq-G1e" id="iTR-SU-LRS"/>
+                        <outlet property="headlineTitle" destination="N1A-gY-0Jh" id="8n4-kv-izg"/>
+                        <segue destination="nEk-aI-kOh" kind="relationship" relationship="nextPage" id="lol-n1-KZn"/>
+                    </connections>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="468" y="643"/>
+            <point key="canvasLocation" x="-98" y="345"/>
         </scene>
-        <!--Notification Controller-->
-        <scene sceneID="Niz-AI-uX2">
+        <!--headline1-->
+        <scene sceneID="UXq-wj-acy">
             <objects>
-                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModuleProvider="target"/>
+                <controller identifier="headline1" id="nEk-aI-kOh" customClass="Headline1Controller" customModule="NewsDay_WatchKit_Extension">
+                    <items>
+                        <imageView alignment="left" contentMode="scaleAspectFit" id="1l6-xy-RVo"/>
+                        <label width="1" alignment="left" text="Title" textAlignment="center" id="l75-aG-Jhd"/>
+                        <label width="1" height="0.55000000000000004" alignment="left" textAlignment="center" numberOfLines="0" id="dTI-iZ-ms4">
+                            <mutableString key="text">Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+
+Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus. Donec id elit non mi porta gravida at eget metus.</mutableString>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="headlineDescription" destination="dTI-iZ-ms4" id="qli-8g-UEO"/>
+                        <outlet property="headlineImage" destination="1l6-xy-RVo" id="7Vr-dR-Gqe"/>
+                        <outlet property="headlineTitle" destination="l75-aG-Jhd" id="GKU-mU-UiK"/>
+                        <segue destination="Z9S-YQ-0Wh" kind="relationship" relationship="nextPage" id="o2l-1e-Sti"/>
+                    </connections>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="468" y="345"/>
+            <point key="canvasLocation" x="208" y="345"/>
+        </scene>
+        <!--headline2-->
+        <scene sceneID="ssA-aN-Rvj">
+            <objects>
+                <controller identifier="headline2" id="Z9S-YQ-0Wh" customClass="Headline2Controller" customModule="NewsDay_WatchKit_Extension">
+                    <items>
+                        <imageView alignment="left" contentMode="scaleAspectFit" id="vpf-Vf-ns9"/>
+                        <label width="1" alignment="left" text="Title" textAlignment="center" id="INa-DJ-hQQ"/>
+                        <label width="1" height="0.55000000000000004" alignment="left" textAlignment="center" numberOfLines="0" id="TO0-YY-1vq">
+                            <mutableString key="text">Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+
+Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus. Donec id elit non mi porta gravida at eget metus.</mutableString>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="headlineDescription" destination="TO0-YY-1vq" id="S4g-nM-dIc"/>
+                        <outlet property="headlineImage" destination="vpf-Vf-ns9" id="2tK-rA-C09"/>
+                        <outlet property="headlineTitle" destination="INa-DJ-hQQ" id="TY3-dy-asy"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="477" y="345"/>
         </scene>
     </scenes>
 </document>
