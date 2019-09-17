@@ -19,6 +19,14 @@
 		0E50889C23314F01008F65B2 /* AsyncRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E50889A23314F01008F65B2 /* AsyncRequest.swift */; };
 		0E50889E2331518C008F65B2 /* SourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E50889D2331518C008F65B2 /* SourcesViewController.swift */; };
 		0E5088A0233151E1008F65B2 /* SourceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E50889F233151E1008F65B2 /* SourceTableViewCell.swift */; };
+		0E5088A223317F6B008F65B2 /* WatchServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5088A123317F6B008F65B2 /* WatchServer.swift */; };
+		0E5088A4233181E0008F65B2 /* WatchClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5088A3233181E0008F65B2 /* WatchClient.swift */; };
+		0E5088AA23318558008F65B2 /* SourceInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5088A923318558008F65B2 /* SourceInterfaceController.swift */; };
+		0E5088AC23318576008F65B2 /* SourceRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5088AB23318576008F65B2 /* SourceRowController.swift */; };
+		0E5088AE233185AF008F65B2 /* HeadlineBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5088AD233185AF008F65B2 /* HeadlineBaseController.swift */; };
+		0E5088B0233185CE008F65B2 /* Headline0Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5088AF233185CE008F65B2 /* Headline0Controller.swift */; };
+		0E5088B2233185F8008F65B2 /* Headline1Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5088B1233185F8008F65B2 /* Headline1Controller.swift */; };
+		0E5088B423318607008F65B2 /* Headline2Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5088B323318607008F65B2 /* Headline2Controller.swift */; };
 		0E840353233113AC0040B385 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E840352233113AC0040B385 /* AppDelegate.swift */; };
 		0E840355233113AC0040B385 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E840354233113AC0040B385 /* BaseController.swift */; };
 		0E840358233113AC0040B385 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E840356233113AC0040B385 /* Main.storyboard */; };
@@ -28,7 +36,7 @@
 		0E840368233113AD0040B385 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E840366233113AD0040B385 /* Interface.storyboard */; };
 		0E84036A233113AE0040B385 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E840369233113AE0040B385 /* Assets.xcassets */; };
 		0E840371233113AE0040B385 /* NewsDay WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0E840370233113AE0040B385 /* NewsDay WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		0E840376233113AE0040B385 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E840375233113AE0040B385 /* InterfaceController.swift */; };
+		0E840376233113AE0040B385 /* PrimaryInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E840375233113AE0040B385 /* PrimaryInterfaceController.swift */; };
 		0E840378233113AE0040B385 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E840377233113AE0040B385 /* ExtensionDelegate.swift */; };
 		0E84037A233113AE0040B385 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E840379233113AE0040B385 /* NotificationController.swift */; };
 		0E84037C233113AE0040B385 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E84037B233113AE0040B385 /* Assets.xcassets */; };
@@ -95,6 +103,14 @@
 		0E50889A23314F01008F65B2 /* AsyncRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncRequest.swift; sourceTree = "<group>"; };
 		0E50889D2331518C008F65B2 /* SourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesViewController.swift; sourceTree = "<group>"; };
 		0E50889F233151E1008F65B2 /* SourceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceTableViewCell.swift; sourceTree = "<group>"; };
+		0E5088A123317F6B008F65B2 /* WatchServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchServer.swift; sourceTree = "<group>"; };
+		0E5088A3233181E0008F65B2 /* WatchClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchClient.swift; sourceTree = "<group>"; };
+		0E5088A923318558008F65B2 /* SourceInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceInterfaceController.swift; sourceTree = "<group>"; };
+		0E5088AB23318576008F65B2 /* SourceRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceRowController.swift; sourceTree = "<group>"; };
+		0E5088AD233185AF008F65B2 /* HeadlineBaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineBaseController.swift; sourceTree = "<group>"; };
+		0E5088AF233185CE008F65B2 /* Headline0Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Headline0Controller.swift; sourceTree = "<group>"; };
+		0E5088B1233185F8008F65B2 /* Headline1Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Headline1Controller.swift; sourceTree = "<group>"; };
+		0E5088B323318607008F65B2 /* Headline2Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Headline2Controller.swift; sourceTree = "<group>"; };
 		0E84034F233113AC0040B385 /* NewsDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E840352233113AC0040B385 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E840354233113AC0040B385 /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
@@ -107,7 +123,7 @@
 		0E840369233113AE0040B385 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E84036B233113AE0040B385 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E840370233113AE0040B385 /* NewsDay WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "NewsDay WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0E840375233113AE0040B385 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		0E840375233113AE0040B385 /* PrimaryInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryInterfaceController.swift; sourceTree = "<group>"; };
 		0E840377233113AE0040B385 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		0E840379233113AE0040B385 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		0E84037B233113AE0040B385 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -155,6 +171,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E5088A5233184B7008F65B2 /* Primary */ = {
+			isa = PBXGroup;
+			children = (
+				0E840375233113AE0040B385 /* PrimaryInterfaceController.swift */,
+			);
+			path = Primary;
+			sourceTree = "<group>";
+		};
+		0E5088A6233184E9008F65B2 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				0E5088A923318558008F65B2 /* SourceInterfaceController.swift */,
+				0E5088AB23318576008F65B2 /* SourceRowController.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		0E5088A82331850B008F65B2 /* Headline */ = {
+			isa = PBXGroup;
+			children = (
+				0E5088AD233185AF008F65B2 /* HeadlineBaseController.swift */,
+				0E5088AF233185CE008F65B2 /* Headline0Controller.swift */,
+				0E5088B1233185F8008F65B2 /* Headline1Controller.swift */,
+				0E5088B323318607008F65B2 /* Headline2Controller.swift */,
+			);
+			path = Headline;
+			sourceTree = "<group>";
+		};
 		0E840346233113AC0040B385 = {
 			isa = PBXGroup;
 			children = (
@@ -209,7 +253,9 @@
 		0E840374233113AE0040B385 /* NewsDay WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				0E840375233113AE0040B385 /* InterfaceController.swift */,
+				0E5088A5233184B7008F65B2 /* Primary */,
+				0E5088A6233184E9008F65B2 /* Source */,
+				0E5088A82331850B008F65B2 /* Headline */,
 				0E840377233113AE0040B385 /* ExtensionDelegate.swift */,
 				0E840379233113AE0040B385 /* NotificationController.swift */,
 				0E84037B233113AE0040B385 /* Assets.xcassets */,
@@ -269,6 +315,8 @@
 			children = (
 				0E50889823314EC0008F65B2 /* NewsApi.swift */,
 				0E50889A23314F01008F65B2 /* AsyncRequest.swift */,
+				0E5088A123317F6B008F65B2 /* WatchServer.swift */,
+				0E5088A3233181E0008F65B2 /* WatchClient.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -563,6 +611,7 @@
 				0E840397233137150040B385 /* SignUpViewController.swift in Sources */,
 				0E50889623314E0B008F65B2 /* CategorizedSources.swift in Sources */,
 				0E50889023314D84008F65B2 /* Article.swift in Sources */,
+				0E5088A223317F6B008F65B2 /* WatchServer.swift in Sources */,
 				0E50889223314DC6008F65B2 /* Source.swift in Sources */,
 				0E50889B23314F01008F65B2 /* AsyncRequest.swift in Sources */,
 				0E5088A0233151E1008F65B2 /* SourceTableViewCell.swift in Sources */,
@@ -576,13 +625,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E5088AE233185AF008F65B2 /* HeadlineBaseController.swift in Sources */,
+				0E5088AA23318558008F65B2 /* SourceInterfaceController.swift in Sources */,
 				0E50889323314DCD008F65B2 /* Article.swift in Sources */,
 				0E84037A233113AE0040B385 /* NotificationController.swift in Sources */,
+				0E5088A4233181E0008F65B2 /* WatchClient.swift in Sources */,
 				0E50889723314E17008F65B2 /* CategorizedSources.swift in Sources */,
+				0E5088B0233185CE008F65B2 /* Headline0Controller.swift in Sources */,
 				0E840378233113AE0040B385 /* ExtensionDelegate.swift in Sources */,
 				0E50889C23314F01008F65B2 /* AsyncRequest.swift in Sources */,
+				0E5088B2233185F8008F65B2 /* Headline1Controller.swift in Sources */,
+				0E5088AC23318576008F65B2 /* SourceRowController.swift in Sources */,
 				0E50889423314DCF008F65B2 /* Source.swift in Sources */,
-				0E840376233113AE0040B385 /* InterfaceController.swift in Sources */,
+				0E5088B423318607008F65B2 /* Headline2Controller.swift in Sources */,
+				0E840376233113AE0040B385 /* PrimaryInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
