@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0E840353233113AC0040B385 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E840352233113AC0040B385 /* AppDelegate.swift */; };
-		0E840355233113AC0040B385 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E840354233113AC0040B385 /* ViewController.swift */; };
+		0E840355233113AC0040B385 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E840354233113AC0040B385 /* BaseController.swift */; };
 		0E840358233113AC0040B385 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E840356233113AC0040B385 /* Main.storyboard */; };
 		0E84035A233113AD0040B385 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E840359233113AD0040B385 /* Assets.xcassets */; };
 		0E84035D233113AD0040B385 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E84035B233113AD0040B385 /* LaunchScreen.storyboard */; };
@@ -73,7 +73,7 @@
 		0DD1F9E880C98CCC4D7807FB /* Pods-NewsDay WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsDay WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-NewsDay WatchKit App/Pods-NewsDay WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
 		0E84034F233113AC0040B385 /* NewsDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E840352233113AC0040B385 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0E840354233113AC0040B385 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0E840354233113AC0040B385 /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 		0E840357233113AC0040B385 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0E840359233113AD0040B385 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E84035C233113AD0040B385 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -152,9 +152,14 @@
 		0E840351233113AC0040B385 /* NewsDay */ = {
 			isa = PBXGroup;
 			children = (
-				0E840352233113AC0040B385 /* AppDelegate.swift */,
-				0E840354233113AC0040B385 /* ViewController.swift */,
-				0E840356233113AC0040B385 /* Main.storyboard */,
+				0E84038E23311A3C0040B385 /* Extensions */,
+				0E84038F23311A4B0040B385 /* Delegates */,
+				0E84039223311A8A0040B385 /* Models */,
+				0E84039123311A790040B385 /* Views */,
+				0E84039023311A620040B385 /* Controllers */,
+				0E84039323311AAA0040B385 /* Network */,
+				0E84039423311ABB0040B385 /* Utilities */,
+				0E84039523311ACE0040B385 /* Cells */,
 				0E840359233113AD0040B385 /* Assets.xcassets */,
 				0E84035B233113AD0040B385 /* LaunchScreen.storyboard */,
 				0E84035E233113AD0040B385 /* Info.plist */,
@@ -184,6 +189,65 @@
 				0E84037E233113AE0040B385 /* PushNotificationPayload.apns */,
 			);
 			path = "NewsDay WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		0E84038E23311A3C0040B385 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0E84038F23311A4B0040B385 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				0E840352233113AC0040B385 /* AppDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		0E84039023311A620040B385 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0E840354233113AC0040B385 /* BaseController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0E84039123311A790040B385 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0E840356233113AC0040B385 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0E84039223311A8A0040B385 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0E84039323311AAA0040B385 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		0E84039423311ABB0040B385 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		0E84039523311ACE0040B385 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		1C17E04313E6120333894B05 /* Pods */ = {
@@ -433,7 +497,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E840355233113AC0040B385 /* ViewController.swift in Sources */,
+				0E840355233113AC0040B385 /* BaseController.swift in Sources */,
 				0E840353233113AC0040B385 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
