@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,7 @@
 		0E840378233113AE0040B385 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E840377233113AE0040B385 /* ExtensionDelegate.swift */; };
 		0E84037A233113AE0040B385 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E840379233113AE0040B385 /* NotificationController.swift */; };
 		0E84037C233113AE0040B385 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E84037B233113AE0040B385 /* Assets.xcassets */; };
+		0E84038D2331189F0040B385 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E84038C2331189F0040B385 /* GoogleService-Info.plist */; };
 		0E99CD44CF8453F89CF6311B /* Pods_NewsDay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CC84758B015682B42251C51 /* Pods_NewsDay.framework */; };
 		63272E5598A88DAB927F2661 /* Pods_NewsDay_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383A8A6E7D8582EB0453B138 /* Pods_NewsDay_WatchKit_Extension.framework */; };
 		E64A85FE044D15EEBF36417D /* Pods_NewsDay_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3321634A4254D4EEA64617E6 /* Pods_NewsDay_WatchKit_App.framework */; };
@@ -88,6 +89,7 @@
 		0E84037B233113AE0040B385 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E84037D233113AE0040B385 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E84037E233113AE0040B385 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		0E84038C2331189F0040B385 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3321634A4254D4EEA64617E6 /* Pods_NewsDay_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsDay_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		383A8A6E7D8582EB0453B138 /* Pods_NewsDay_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsDay_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C37AC44DDB15298F6DAD228 /* Pods-NewsDay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsDay.release.xcconfig"; path = "Target Support Files/Pods-NewsDay/Pods-NewsDay.release.xcconfig"; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				0E840359233113AD0040B385 /* Assets.xcassets */,
 				0E84035B233113AD0040B385 /* LaunchScreen.storyboard */,
 				0E84035E233113AD0040B385 /* Info.plist */,
+				0E84038C2331189F0040B385 /* GoogleService-Info.plist */,
 			);
 			path = NewsDay;
 			sourceTree = "<group>";
@@ -193,7 +196,6 @@
 				E2297822B242FEB83BE40B54 /* Pods-NewsDay WatchKit Extension.debug.xcconfig */,
 				E1A9BC3ADF1D8E7FB3216692 /* Pods-NewsDay WatchKit Extension.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -315,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E84035D233113AD0040B385 /* LaunchScreen.storyboard in Resources */,
+				0E84038D2331189F0040B385 /* GoogleService-Info.plist in Resources */,
 				0E84035A233113AD0040B385 /* Assets.xcassets in Resources */,
 				0E840358233113AC0040B385 /* Main.storyboard in Resources */,
 			);
