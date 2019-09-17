@@ -13,13 +13,18 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var watchServer: WatchServer?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         FirebaseApp.configure()
         let db = Firestore.firestore()
         print(db)
+        
+        
+        // start the watch connectivity server-connection
+        watchServer = WatchServer()
         return true
     }
 
