@@ -158,9 +158,4 @@ class Article {
         
         return nil
     }
-    
-    let apiKey = "d633833ac99a41e49c3ba6f55e2b46e1"
-    
-    func downloadArticles() {
-    }
 }
