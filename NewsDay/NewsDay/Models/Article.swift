@@ -12,7 +12,7 @@ import Kingfisher
 class Article {
     var author: String
     var title: String
-    var description: String
+    var desc: String
     var content: String
     var url: URL?
     var urlImage: URL?
@@ -36,7 +36,7 @@ class Article {
          content: String, url: URL?, urlImage: URL?, date: Date?) {
         self.author = author
         self.title = title
-        self.description = description
+        self.desc = description
         self.content = content
         self.url = url
         self.urlImage = urlImage
@@ -67,6 +67,28 @@ class Article {
         self.init(jsonArticle: [:])
     }
     
+    // MARK: Encoding & Decoding
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(author, forKey: "author")
+        aCoder.encode(title, forKey: "title")
+        aCoder.encode(desc, forKey: "desc")
+        aCoder.encode(content, forKey: "content")
+        aCoder.encode(url, forKey: "url")
+        aCoder.encode(urlImage, forKey: "urlImage")
+        aCoder.encode(date, forKey: "date")
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        author = aDecoder.decodeObject(forKey: "author") as! String
+        title = aDecoder.decodeObject(forKey: "title") as! String
+        desc = aDecoder.decodeObject(forKey: "desc") as! String
+        content = aDecoder.decodeObject(forKey: "content") as! String
+        url = aDecoder.decodeObject(forKey: "url") as? URL
+        urlImage = aDecoder.decodeObject(forKey: "urlImage") as? URL
+        date = aDecoder.decodeObject(forKey: "date") as? Date
+    }
+    
+    
     func simpleHeadline(callback: @escaping ([String: Any?]) -> Void) {
         if let validUrl = urlImage {
             KingfisherManager.shared.retrieveImage(with: validUrl) { (result) in
@@ -74,7 +96,7 @@ class Article {
                 
                 let data: [String: Any?] = [
                     "title": self.title,
-                    "description": self.description,
+                    "description": self.desc,
                     "image": image
                 ]
                 
@@ -84,7 +106,7 @@ class Article {
             DispatchQueue.main.async {
                 let data = [
                     "title": self.title,
-                    "description": self.description,
+                    "description": self.desc,
                     "image": nil
                 ]
                 
