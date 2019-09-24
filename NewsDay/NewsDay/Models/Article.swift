@@ -88,7 +88,38 @@ class Article {
         date = aDecoder.decodeObject(forKey: "date") as? Date
     }
     
+    // MARK: Archiving & Unarchiving
+    public static func keyedArchivedArray(articles: [Article]) -> Data? {
+        NSKeyedArchiver.setClassName("Article", for: Article.self)
+        
+        guard let data = try? NSKeyedArchiver.archivedData(
+            withRootObject: articles,
+            requiringSecureCoding: false)
+            else {
+                print("Unable to keyed-archive Article array")
+                return nil
+        }
+        
+        return data
+    }
     
+    public static func keyedUnarchiveArray(data: Data?) -> [Article]? {
+        guard let archivedArticles = data else { return nil }
+        
+        NSKeyedUnarchiver.setClass(Article.self, forClassName: "Article")
+        
+        guard let articles = try?
+            NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(
+                archivedArticles) as? [Article]
+            else {
+                print("Unable to keyed-unarchive article array")
+                return nil
+        }
+        
+        return articles
+    }
+    
+    // MARK: Misc
     func simpleHeadline(callback: @escaping ([String: Any?]) -> Void) {
         if let validUrl = urlImage {
             KingfisherManager.shared.retrieveImage(with: validUrl) { (result) in
