@@ -26,6 +26,7 @@ class Source: NSObject, NSCoding {
         self.country = country
     }
     
+    // MARK: Encoding & Decoding
     required init?(coder aDecoder: NSCoder) {
         id = aDecoder.decodeObject(forKey: "id") as! String
         name = aDecoder.decodeObject(forKey: "name") as! String
@@ -44,6 +45,7 @@ class Source: NSObject, NSCoding {
         aCoder.encode(country, forKey: "country")
     }
     
+    // MARK: JSON Inits
     convenience init(jsonSource: [String: Any]) {
         self.init(
             id: jsonSource["id"] as? String ?? "",
@@ -58,6 +60,38 @@ class Source: NSObject, NSCoding {
         self.init(jsonSource: [:])
     }
     
+    // MARK: Archiving & Unarchiving Object
+    public func keyedArchive() -> Data? {
+        NSKeyedArchiver.setClassName("Source", for: Source.self)
+        
+        guard let data = try? NSKeyedArchiver.archivedData(
+            withRootObject: self,
+            requiringSecureCoding: false)
+            else {
+                print("Unable to keyed-archive Source array")
+                return nil
+        }
+        
+        return data
+    }
+    
+    public static func keyedUnarchive(data: Data?) -> Source? {
+        guard let archivedSource = data else { return nil }
+        
+        NSKeyedUnarchiver.setClass(Source.self, forClassName: "Source")
+        
+        guard let sources = try?
+            NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(
+                archivedSource) as? Source
+            else {
+                print("Unable to keyed-unarchive source array")
+                return nil
+        }
+        
+        return sources
+    }
+    
+    // MARK: Archiving & Unarchiving Array
     public static func keyedArchiveArray(sources: [Source]) -> Data? {
         NSKeyedArchiver.setClassName("Source", for: Source.self)
         
