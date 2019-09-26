@@ -23,7 +23,10 @@ class SourceInterfaceController: WKInterfaceController {
     }
     
     func populateTable(with sources: [Source]) {
+        self.sources = sources
+        
         sourceTable.setNumberOfRows(sources.count, withRowType: "sourceRow")
+        
         for index in 0 ..< sources.count {
             guard let rowController = sourceTable.rowController(
                 at: index) as? SourceRowController
@@ -36,6 +39,6 @@ class SourceInterfaceController: WKInterfaceController {
     override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
         guard let sources = sources else { return }
         let source = sources[rowIndex]
-        presentController(withName: "articleListView", context: source)
+        presentController(withName: "articlesView", context: source)
     }
 }
