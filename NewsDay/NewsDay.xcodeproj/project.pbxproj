@@ -35,6 +35,9 @@
 		0E63ACB0233CC206000187DB /* HeadlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E63ACAF233CC206000187DB /* HeadlineViewController.swift */; };
 		0E63ACB2233CC354000187DB /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E63ACB1233CC354000187DB /* ArticleTableViewCell.swift */; };
 		0E63ACB4233CC388000187DB /* HeadlineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E63ACB3233CC388000187DB /* HeadlineTableViewCell.swift */; };
+		0E63ACB7233CE6F8000187DB /* ArticleInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E63ACB6233CE6F8000187DB /* ArticleInterfaceController.swift */; };
+		0E63ACB9233CE85B000187DB /* ArticleRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E63ACB8233CE85B000187DB /* ArticleRowController.swift */; };
+		0E63ACBB233CE8A0000187DB /* ArticleDetailInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E63ACBA233CE8A0000187DB /* ArticleDetailInterfaceController.swift */; };
 		0E840353233113AC0040B385 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E840352233113AC0040B385 /* AppDelegate.swift */; };
 		0E840355233113AC0040B385 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E840354233113AC0040B385 /* BaseController.swift */; };
 		0E840358233113AC0040B385 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E840356233113AC0040B385 /* Main.storyboard */; };
@@ -127,6 +130,9 @@
 		0E63ACAF233CC206000187DB /* HeadlineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineViewController.swift; sourceTree = "<group>"; };
 		0E63ACB1233CC354000187DB /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		0E63ACB3233CC388000187DB /* HeadlineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineTableViewCell.swift; sourceTree = "<group>"; };
+		0E63ACB6233CE6F8000187DB /* ArticleInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleInterfaceController.swift; sourceTree = "<group>"; };
+		0E63ACB8233CE85B000187DB /* ArticleRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleRowController.swift; sourceTree = "<group>"; };
+		0E63ACBA233CE8A0000187DB /* ArticleDetailInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailInterfaceController.swift; sourceTree = "<group>"; };
 		0E84034F233113AC0040B385 /* NewsDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E840352233113AC0040B385 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E840354233113AC0040B385 /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
@@ -215,6 +221,16 @@
 			path = Headline;
 			sourceTree = "<group>";
 		};
+		0E63ACB5233CE6CC000187DB /* Article */ = {
+			isa = PBXGroup;
+			children = (
+				0E63ACB6233CE6F8000187DB /* ArticleInterfaceController.swift */,
+				0E63ACB8233CE85B000187DB /* ArticleRowController.swift */,
+				0E63ACBA233CE8A0000187DB /* ArticleDetailInterfaceController.swift */,
+			);
+			path = Article;
+			sourceTree = "<group>";
+		};
 		0E840346233113AC0040B385 = {
 			isa = PBXGroup;
 			children = (
@@ -269,6 +285,7 @@
 		0E840374233113AE0040B385 /* NewsDay WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				0E63ACB5233CE6CC000187DB /* Article */,
 				0E5088A5233184B7008F65B2 /* Primary */,
 				0E5088A6233184E9008F65B2 /* Source */,
 				0E5088A82331850B008F65B2 /* Headline */,
@@ -664,11 +681,14 @@
 				0E5088A4233181E0008F65B2 /* WatchClient.swift in Sources */,
 				0E50889723314E17008F65B2 /* CategorizedSources.swift in Sources */,
 				0E5088B0233185CE008F65B2 /* Headline0Controller.swift in Sources */,
+				0E63ACB7233CE6F8000187DB /* ArticleInterfaceController.swift in Sources */,
 				0E840378233113AE0040B385 /* ExtensionDelegate.swift in Sources */,
 				0E50889C23314F01008F65B2 /* AsyncRequest.swift in Sources */,
 				0E5088B2233185F8008F65B2 /* Headline1Controller.swift in Sources */,
+				0E63ACB9233CE85B000187DB /* ArticleRowController.swift in Sources */,
 				0E5088AC23318576008F65B2 /* SourceRowController.swift in Sources */,
 				0E50889423314DCF008F65B2 /* Source.swift in Sources */,
+				0E63ACBB233CE8A0000187DB /* ArticleDetailInterfaceController.swift in Sources */,
 				0E5088B423318607008F65B2 /* Headline2Controller.swift in Sources */,
 				0E840376233113AE0040B385 /* PrimaryInterfaceController.swift in Sources */,
 			);

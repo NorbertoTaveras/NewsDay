@@ -18,6 +18,8 @@ class ArticleDetailViewController: UIViewController {
     @IBOutlet weak var articleDescription: UITextView!
     
     var article = Article()
+    var source = Source()
+    
     var articleUIImage: UIImage?
     
     override func viewDidLoad() {
@@ -59,6 +61,7 @@ class ArticleDetailViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? ArticleWebViewController {
             destination.article = article
+            destination.source = source
         }
     }
 }
