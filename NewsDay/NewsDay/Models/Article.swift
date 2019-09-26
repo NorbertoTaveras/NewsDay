@@ -9,7 +9,7 @@
 import Foundation
 import Kingfisher
 
-class Article {
+class Article : NSObject, NSCoding {
     var author: String
     var title: String
     var desc: String
@@ -63,7 +63,7 @@ class Article {
                   date: date)
     }
     
-    convenience init() {
+    convenience override init() {
         self.init(jsonArticle: [:])
     }
     
