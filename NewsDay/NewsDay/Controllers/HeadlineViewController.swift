@@ -36,4 +36,9 @@ class HeadlineViewController: ArticleViewBase {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func backToArticles(segue: UIStoryboardSegue) {
+        let controller = self.navigationController?.viewControllers[0] as! HeadlineViewController
+        navigationController?.popToViewController(controller, animated: true)
+    }
+    
 }

@@ -34,4 +34,9 @@ class ArticleViewController: ArticleViewBase {
     @IBAction func back(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func backToArticles(segue: UIStoryboardSegue) {
+        let controller = self.navigationController?.viewControllers[1] as! ArticleViewController
+        navigationController?.popToViewController(controller, animated: true)
+    }
 }
