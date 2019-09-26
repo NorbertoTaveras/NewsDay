@@ -2,7 +2,7 @@
 //  HeadlineTableViewCell.swift
 //  NewsDay
 //
-//  Created by Norberto Taveras on 9/26/19.
+//  Created by Norberto Taveras on 9/19/19.
 //  Copyright © 2019 Norberto Taveras. All rights reserved.
 //
 
