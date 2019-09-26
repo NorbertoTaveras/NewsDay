@@ -13,6 +13,7 @@ import WatchConnectivity
 class HeadlineBaseController: WKInterfaceController {
     
     let headlineIndex: Int
+    var articles: [Article] = []
     
     override init() {
         headlineIndex = -1
@@ -26,7 +27,23 @@ class HeadlineBaseController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        // Configure interface objects here.
+        guard let headlinesRequest = context as? AsyncRequest
+            else { return }
+        
+        self.populateUI(title: "",
+                        description: "",
+                        urlImage: nil)
+        
+        headlinesRequest.withResult { (result, error) in
+            guard let articles = result as? [Article]
+                else { return }
+            self.articles = articles
+            let article = articles[self.headlineIndex]
+            
+            self.populateUI(title: article.title,
+                            description: article.desc,
+                            urlImage: article.urlImage)
+        }
     }
     
     override func willActivate() {
@@ -37,7 +54,7 @@ class HeadlineBaseController: WKInterfaceController {
     
     // This must be overridden but Swift has no capability to enforce that
     // Hope for the best!
-    func populateUI(title: String, description: String, image: UIImage?) {
+    func populateUI(title: String, description: String, urlImage: URL?) {
     }
     
     func populateControls(headlineImage: WKInterfaceImage,
@@ -45,10 +62,14 @@ class HeadlineBaseController: WKInterfaceController {
                           headlineDescription: WKInterfaceLabel,
                           title: String,
                           description: String,
-                          image: UIImage?) {
+                          urlImage: URL?) {
         headlineTitle.setText(title)
         headlineDescription.setText(description)
-        headlineImage.setImage(image)
+        if let urlImage = urlImage {
+            headlineImage.imageFromPhone(url: urlImage)
+        } else {
+            headlineImage.setImage(nil)
+        }
     }
     
     override func didDeactivate() {
