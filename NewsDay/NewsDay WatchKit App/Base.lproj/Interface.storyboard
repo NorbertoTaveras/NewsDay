@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="asV-6x-ivz">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="87N-U6-0sV">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,20 +10,20 @@
     </dependencies>
     <scenes>
         <!--Primary Interface Controller-->
-        <scene sceneID="beU-ID-wbN">
+        <scene sceneID="jTh-lc-WfQ">
             <objects>
-                <controller id="asV-6x-ivz" customClass="PrimaryInterfaceController" customModule="NewsDay_WatchKit_Extension">
+                <controller id="87N-U6-0sV" customClass="PrimaryInterfaceController" customModule="NewsDay_WatchKit_Extension">
                     <items>
-                        <imageView alignment="left" contentMode="scaleAspectFit" id="Qb7-KM-Ufl"/>
-                        <button width="1" alignment="left" title="Headlines" id="hxR-ze-Jgl">
+                        <imageView alignment="left" contentMode="scaleAspectFit" id="rD3-DT-6EK"/>
+                        <button width="1" alignment="left" title="Headlines" id="Ouc-Ul-5m8">
                             <connections>
-                                <segue destination="Pj3-lD-avz" kind="push" identifier="headline0" id="xnS-it-sJ7"/>
+                                <segue destination="S9Y-tZ-YGn" kind="modal" id="AUo-a5-zdh"/>
                             </connections>
                         </button>
-                        <button width="1" alignment="left" title="Sources" id="mT4-49-3eU">
+                        <button width="1" alignment="left" title="Sources" id="IdX-Ha-d2i">
                             <connections>
-                                <action selector="sourcesTapped" destination="asV-6x-ivz" id="b5X-to-xPT"/>
-                                <segue destination="MQ3-3M-OtO" kind="push" identifier="sourcesView" id="RdN-Pm-U6z"/>
+                                <action selector="sourcesTapped" destination="87N-U6-0sV" id="UEj-xf-XlS"/>
+                                <segue destination="eOd-LG-05b" kind="push" identifier="sourcesView" id="EgR-Vc-1DV"/>
                             </connections>
                         </button>
                     </items>
@@ -32,95 +32,128 @@
             <point key="canvasLocation" x="-407" y="339"/>
         </scene>
         <!--Source Interface Controller-->
-        <scene sceneID="lV6-0c-xgs">
+        <scene sceneID="Nl5-bu-IaD">
             <objects>
-                <controller id="MQ3-3M-OtO" customClass="SourceInterfaceController" customModule="NewsDay_WatchKit_Extension">
+                <controller id="eOd-LG-05b" customClass="SourceInterfaceController" customModule="NewsDay_WatchKit_Extension">
                     <items>
-                        <table alignment="left" id="SXa-p5-mmb">
+                        <table alignment="left" id="ud0-u3-5eq">
                             <items>
-                                <tableRow identifier="sourceRow" id="hO0-1c-7Dn" customClass="SourceRowController" customModule="NewsDay_WatchKit_Extension">
-                                    <group key="rootItem" width="1" alignment="left" layout="vertical" id="uGR-bL-OSL">
+                                <tableRow identifier="sourceRow" id="md6-qf-9r4" customClass="SourceRowController" customModule="NewsDay_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" layout="vertical" id="O8h-ZP-x4P">
                                         <items>
-                                            <label width="1" height="1" alignment="left" text="Source" textAlignment="center" numberOfLines="0" id="3hE-qa-qYj"/>
+                                            <label width="1" height="1" alignment="left" text="Source" textAlignment="center" numberOfLines="0" id="83c-wB-0BX"/>
                                         </items>
                                     </group>
                                     <connections>
-                                        <outlet property="sourceName" destination="3hE-qa-qYj" id="HeH-Vr-hMb"/>
+                                        <outlet property="sourceName" destination="83c-wB-0BX" id="WCv-CC-dzC"/>
                                     </connections>
                                 </tableRow>
                             </items>
                         </table>
                     </items>
                     <connections>
-                        <outlet property="sourceTable" destination="SXa-p5-mmb" id="Jyl-rI-egS"/>
+                        <outlet property="sourceTable" destination="ud0-u3-5eq" id="Ti2-Gy-vbh"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="-407" y="753"/>
         </scene>
-        <!--Headline0 Controller-->
-        <scene sceneID="KbF-LF-9dv">
+        <!--articlesView-->
+        <scene sceneID="AmW-UQ-ptM">
             <objects>
-                <controller id="Pj3-lD-avz" customClass="Headline0Controller" customModule="NewsDay_WatchKit_Extension">
+                <controller identifier="articlesView" id="t6A-ui-W2l" customClass="ArticleInterfaceController" customModule="NewsDay_WatchKit_Extension">
                     <items>
-                        <imageView alignment="left" contentMode="scaleAspectFit" id="MeK-Hq-G1e"/>
-                        <label width="1" alignment="left" text="Title" textAlignment="center" id="N1A-gY-0Jh"/>
-                        <label width="1" height="0.55000000000000004" alignment="left" textAlignment="center" numberOfLines="0" id="ywA-gk-oXd">
-                            <mutableString key="text">Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-
-Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus. Donec id elit non mi porta gravida at eget metus.</mutableString>
-                        </label>
+                        <table alignment="left" id="fdO-Mk-5Pk">
+                            <items>
+                                <tableRow identifier="articleRow" id="n5t-jd-TNm" customClass="ArticleRowController" customModule="NewsDay_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="R8x-fn-X7y">
+                                        <items>
+                                            <label width="1" alignment="left" text="Article Title" textAlignment="left" numberOfLines="0" id="Lm1-fc-eMb"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="articleTitle" destination="Lm1-fc-eMb" id="0Yq-OX-NYS"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
                     </items>
                     <connections>
-                        <outlet property="headlineDescription" destination="ywA-gk-oXd" id="cWj-3a-TZf"/>
-                        <outlet property="headlineImage" destination="MeK-Hq-G1e" id="iTR-SU-LRS"/>
-                        <outlet property="headlineTitle" destination="N1A-gY-0Jh" id="8n4-kv-izg"/>
-                        <segue destination="nEk-aI-kOh" kind="relationship" relationship="nextPage" id="lol-n1-KZn"/>
+                        <outlet property="articleTable" destination="fdO-Mk-5Pk" id="JQP-xM-Opd"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-98" y="753"/>
+        </scene>
+        <!--articleDetailView-->
+        <scene sceneID="DYd-Vg-2Y6">
+            <objects>
+                <controller identifier="articleDetailView" id="7Hu-8e-N7S" customClass="ArticleDetailInterfaceController" customModule="NewsDay_WatchKit_Extension">
+                    <items>
+                        <imageView width="0.84999999999999998" alignment="center" id="4Mr-W1-Fog"/>
+                        <label width="1" alignment="left" text="Title" textAlignment="center" numberOfLines="0" id="TN6-ye-vcM"/>
+                        <label width="1" alignment="left" text="Content" numberOfLines="0" id="70J-hk-fgd"/>
+                    </items>
+                    <connections>
+                        <outlet property="articleContent" destination="70J-hk-fgd" id="kO7-bs-Igh"/>
+                        <outlet property="articleImage" destination="4Mr-W1-Fog" id="mtI-aS-aEl"/>
+                        <outlet property="articleTitle" destination="TN6-ye-vcM" id="AMh-bv-fLN"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="208" y="753"/>
+        </scene>
+        <!--headline0-->
+        <scene sceneID="Jaq-5l-bbS">
+            <objects>
+                <controller identifier="headline0" id="S9Y-tZ-YGn" customClass="Headline0Controller" customModule="NewsDay_WatchKit_Extension">
+                    <items>
+                        <imageView width="0.84999999999999998" alignment="center" contentMode="scaleAspectFit" id="cY8-Zi-uyl"/>
+                        <label width="1" alignment="left" text="Title" textAlignment="center" id="JJG-Qx-HrC"/>
+                        <label width="1" alignment="left" text="Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Maecenas faucibus mollis interdum..." textAlignment="left" numberOfLines="0" id="L0J-J0-3Nd"/>
+                    </items>
+                    <connections>
+                        <outlet property="headlineDescription" destination="L0J-J0-3Nd" id="iwF-rU-qLe"/>
+                        <outlet property="headlineImage" destination="cY8-Zi-uyl" id="CtK-BA-7PO"/>
+                        <outlet property="headlineTitle" destination="JJG-Qx-HrC" id="3ES-ZV-f5s"/>
+                        <segue destination="t9k-9b-1ZW" kind="relationship" relationship="nextPage" id="haP-sS-qVB"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="-98" y="345"/>
         </scene>
         <!--headline1-->
-        <scene sceneID="UXq-wj-acy">
+        <scene sceneID="8U5-fX-VZo">
             <objects>
-                <controller identifier="headline1" id="nEk-aI-kOh" customClass="Headline1Controller" customModule="NewsDay_WatchKit_Extension">
+                <controller identifier="headline1" id="t9k-9b-1ZW" customClass="Headline1Controller" customModule="NewsDay_WatchKit_Extension">
                     <items>
-                        <imageView alignment="left" contentMode="scaleAspectFit" id="1l6-xy-RVo"/>
-                        <label width="1" alignment="left" text="Title" textAlignment="center" id="l75-aG-Jhd"/>
-                        <label width="1" height="0.55000000000000004" alignment="left" textAlignment="center" numberOfLines="0" id="dTI-iZ-ms4">
-                            <mutableString key="text">Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-
-Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus. Donec id elit non mi porta gravida at eget metus.</mutableString>
-                        </label>
+                        <imageView width="0.84999999999999998" alignment="center" contentMode="scaleAspectFit" id="bAJ-TY-WyC"/>
+                        <label width="1" alignment="left" text="Title" textAlignment="center" id="6oO-am-wkI"/>
+                        <label width="1" alignment="left" text="Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Maecenas faucibus mollis interdum..." textAlignment="left" numberOfLines="0" id="MD9-Xw-Xzb"/>
                     </items>
                     <connections>
-                        <outlet property="headlineDescription" destination="dTI-iZ-ms4" id="qli-8g-UEO"/>
-                        <outlet property="headlineImage" destination="1l6-xy-RVo" id="7Vr-dR-Gqe"/>
-                        <outlet property="headlineTitle" destination="l75-aG-Jhd" id="GKU-mU-UiK"/>
-                        <segue destination="Z9S-YQ-0Wh" kind="relationship" relationship="nextPage" id="o2l-1e-Sti"/>
+                        <outlet property="headlineDescription" destination="MD9-Xw-Xzb" id="z9N-nW-mcu"/>
+                        <outlet property="headlineImage" destination="bAJ-TY-WyC" id="dcS-k7-mvA"/>
+                        <outlet property="headlineTitle" destination="6oO-am-wkI" id="tAS-cK-EBJ"/>
+                        <segue destination="k0i-5B-3m0" kind="relationship" relationship="nextPage" id="28e-ds-yin"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="208" y="345"/>
         </scene>
         <!--headline2-->
-        <scene sceneID="ssA-aN-Rvj">
+        <scene sceneID="S1y-vq-RqA">
             <objects>
-                <controller identifier="headline2" id="Z9S-YQ-0Wh" customClass="Headline2Controller" customModule="NewsDay_WatchKit_Extension">
+                <controller identifier="headline2" id="k0i-5B-3m0" customClass="Headline2Controller" customModule="NewsDay_WatchKit_Extension">
                     <items>
-                        <imageView alignment="left" contentMode="scaleAspectFit" id="vpf-Vf-ns9"/>
-                        <label width="1" alignment="left" text="Title" textAlignment="center" id="INa-DJ-hQQ"/>
-                        <label width="1" height="0.55000000000000004" alignment="left" textAlignment="center" numberOfLines="0" id="TO0-YY-1vq">
-                            <mutableString key="text">Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-
-Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus. Donec id elit non mi porta gravida at eget metus.</mutableString>
-                        </label>
+                        <imageView width="0.84999999999999998" alignment="center" contentMode="scaleAspectFit" id="Rm4-X3-i2V"/>
+                        <label width="1" alignment="left" text="Title" textAlignment="center" id="rwM-Gq-zZi"/>
+                        <label width="1" alignment="left" text="Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Maecenas faucibus mollis interdum..." textAlignment="left" numberOfLines="0" id="hOY-jW-6rc"/>
                     </items>
                     <connections>
-                        <outlet property="headlineDescription" destination="TO0-YY-1vq" id="S4g-nM-dIc"/>
-                        <outlet property="headlineImage" destination="vpf-Vf-ns9" id="2tK-rA-C09"/>
-                        <outlet property="headlineTitle" destination="INa-DJ-hQQ" id="TY3-dy-asy"/>
+                        <outlet property="headlineDescription" destination="hOY-jW-6rc" id="pY8-6J-Raa"/>
+                        <outlet property="headlineImage" destination="Rm4-X3-i2V" id="kQv-Sy-vZt"/>
+                        <outlet property="headlineTitle" destination="rwM-Gq-zZi" id="SPQ-5i-IhO"/>
                     </connections>
                 </controller>
             </objects>
