@@ -28,6 +28,18 @@ class PrimaryInterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
     
+    override func contextsForSegue(withIdentifier segueIdentifier: String) -> [Any]? {
+        let headlinesRequest = WatchClient.getHeadlines(
+            country: "us",
+            limit: 3)
+        
+        return [
+            headlinesRequest,
+            headlinesRequest,
+            headlinesRequest
+        ]
+    }
+    
     @IBAction func sourcesTapped() {
         presentController(withName: "sourcesView", context: nil)
     }
