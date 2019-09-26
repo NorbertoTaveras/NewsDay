@@ -18,12 +18,12 @@ class Headline2Controller: HeadlineBaseController {
         self.init(headlineIndex: 2)
     }
     
-    override func populateUI(title: String, description: String, image: UIImage?) {
+    override func populateUI(title: String, description: String, urlImage: URL?) {
         populateControls(headlineImage: headlineImage,
                          headlineTitle: headlineTitle,
                          headlineDescription: headlineDescription,
                          title: title,
                          description: description,
-                         image: image)
+                         urlImage: urlImage)
     }
 }
