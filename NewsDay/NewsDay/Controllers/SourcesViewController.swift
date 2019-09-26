@@ -46,6 +46,10 @@ class SourcesViewController: UIViewController, UITableViewDelegate, UITableViewD
         return sources.details.isEmpty ? 0 : sources.details[section].count
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return sources.details.count
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let rawCell = sourcesTableView.dequeueReusableCell(
             withIdentifier: "sourceCell",
@@ -60,11 +64,16 @@ class SourcesViewController: UIViewController, UITableViewDelegate, UITableViewD
         return cell
     }
     
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sources.categories[section].capitalized
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.selectedSource = sources.details[indexPath.section][indexPath.row]
         performSegue(withIdentifier: "article_view", sender: self)
     }
     
+    // MARK: Prepare for Segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case "article_view":
@@ -77,4 +86,5 @@ class SourcesViewController: UIViewController, UITableViewDelegate, UITableViewD
             break
         }
     }
+    
 }
