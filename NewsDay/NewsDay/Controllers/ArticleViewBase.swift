@@ -11,6 +11,7 @@ import UIKit
 class ArticleViewBase: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var articles: [Article] = []
+    
     var selectedArticleIndex = -1
     
     weak var table: UITableView!
@@ -64,6 +65,7 @@ class ArticleViewBase: UIViewController, UITableViewDelegate, UITableViewDataSou
         switch segue.identifier {
         case "article_detail_view":
             if let destination = segue.destination as? ArticleDetailViewController {
+
                 destination.article = articles[selectedArticleIndex]
                 selectedArticleIndex = -1
             }

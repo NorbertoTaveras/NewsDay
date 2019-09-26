@@ -2,7 +2,7 @@
 //  ImageFromPhone.swift
 //  NewsDay WatchKit Extension
 //
-//  Created by Norberto Taveras on 9/24/19.
+//  Created by Norberto Taveras on 9/20/19.
 //  Copyright © 2019 Norberto Taveras. All rights reserved.
 //
 

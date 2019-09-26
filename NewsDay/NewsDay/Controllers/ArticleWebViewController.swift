@@ -14,6 +14,7 @@ class ArticleWebViewController: UIViewController, WKUIDelegate, WKNavigationDele
     @IBOutlet var articleWebView: WKWebView!
     
     var article: Article?
+    var source = Source()
     
     override func loadView() {
         let webConfig = WKWebViewConfiguration()
@@ -31,6 +32,7 @@ class ArticleWebViewController: UIViewController, WKUIDelegate, WKNavigationDele
     override func viewDidLoad() {
         super.viewDidLoad()
         tabBarController?.tabBar.isHidden = true
+        title = source.name
         if let validURL = article?.url {
             let request = URLRequest(url: validURL)
             articleWebView.load(request)
