@@ -27,7 +27,13 @@ class SourcesViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         sourcesTableView.delegate = self
         sourcesTableView.dataSource = self
-    }
+        tabBarController?.tabBar.isHidden = false
+    } // end of view did load
+    
+    override func viewWillAppear(_ animated: Bool) {
+        title = "Sources"
+        tabBarController?.tabBar.isHidden = false
+    } // end of view will appear
     
     // MARK: Custom Methods
     func processSources(newSources : CategorizedSources) {
@@ -52,5 +58,23 @@ class SourcesViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         cell.sourceName.text = target.name
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectedSource = sources.details[indexPath.section][indexPath.row]
+        performSegue(withIdentifier: "article_view", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "article_view":
+            if let destination = segue.destination as? ArticleViewController {
+                destination.source = selectedSource
+            }
+            break
+            
+        default:
+            break
+        }
     }
 }
