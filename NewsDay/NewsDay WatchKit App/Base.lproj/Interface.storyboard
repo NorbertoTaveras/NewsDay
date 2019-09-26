@@ -14,7 +14,7 @@
             <objects>
                 <controller id="87N-U6-0sV" customClass="PrimaryInterfaceController" customModule="NewsDay_WatchKit_Extension">
                     <items>
-                        <imageView alignment="left" contentMode="scaleAspectFit" id="rD3-DT-6EK"/>
+                        <imageView width="90" height="90" alignment="center" image="NewsDayWatchLogo" contentMode="scaleAspectFit" id="rD3-DT-6EK"/>
                         <button width="1" alignment="left" title="Headlines" id="Ouc-Ul-5m8">
                             <connections>
                                 <segue destination="S9Y-tZ-YGn" kind="modal" id="AUo-a5-zdh"/>

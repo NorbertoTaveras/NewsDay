@@ -38,6 +38,9 @@
 		0E63ACB7233CE6F8000187DB /* ArticleInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E63ACB6233CE6F8000187DB /* ArticleInterfaceController.swift */; };
 		0E63ACB9233CE85B000187DB /* ArticleRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E63ACB8233CE85B000187DB /* ArticleRowController.swift */; };
 		0E63ACBB233CE8A0000187DB /* ArticleDetailInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E63ACBA233CE8A0000187DB /* ArticleDetailInterfaceController.swift */; };
+		0E63ACBE233D2311000187DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E84037B233113AE0040B385 /* Assets.xcassets */; };
+		0E63ACBF233D2324000187DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E840359233113AD0040B385 /* Assets.xcassets */; };
+		0E63ACC0233D2325000187DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E840359233113AD0040B385 /* Assets.xcassets */; };
 		0E840353233113AC0040B385 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E840352233113AC0040B385 /* AppDelegate.swift */; };
 		0E840355233113AC0040B385 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E840354233113AC0040B385 /* BaseController.swift */; };
 		0E840358233113AC0040B385 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E840356233113AC0040B385 /* Main.storyboard */; };
@@ -522,6 +525,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E84036A233113AE0040B385 /* Assets.xcassets in Resources */,
+				0E63ACBE233D2311000187DB /* Assets.xcassets in Resources */,
+				0E63ACBF233D2324000187DB /* Assets.xcassets in Resources */,
 				0E840368233113AD0040B385 /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -530,6 +535,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E63ACC0233D2325000187DB /* Assets.xcassets in Resources */,
 				0E84037C233113AE0040B385 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -95,7 +95,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3VX-Ty-lLJ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Sign Up" id="0TG-wk-F2e"/>
+                    <tabBarItem key="tabBarItem" title="Sign Up" image="icons8-add-user-male-32" id="0TG-wk-F2e"/>
                     <connections>
                         <outlet property="email" destination="6q2-qG-4E4" id="8iU-in-a46"/>
                         <outlet property="password" destination="7Ar-ta-eVX" id="mnp-PK-itz"/>
@@ -204,7 +204,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YIw-fH-yv7"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Sign In" id="ww9-81-K5v"/>
+                    <tabBarItem key="tabBarItem" title="Sign In" image="icons8-user-32" id="ww9-81-K5v"/>
                     <connections>
                         <outlet property="email" destination="gt3-cd-OOx" id="bfV-WK-doP"/>
                         <outlet property="password" destination="m48-De-8Nu" id="q08-Ef-qjy"/>
@@ -314,7 +314,7 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Heq-jX-pi7">
                                                     <rect key="frame" x="0.0" y="0.0" width="83" height="69.5"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n7U-nN-QRV">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n7U-nN-QRV">
                                                     <rect key="frame" x="91" y="0.0" width="323" height="69.5"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -468,13 +468,18 @@
                         <viewLayoutGuide key="safeArea" id="cTC-RF-cK8"/>
                     </view>
                     <navigationItem key="navigationItem" id="qfy-eM-TbO">
-                        <barButtonItem key="rightBarButtonItem" title="Articles" id="hfd-fX-Ao0"/>
+                        <barButtonItem key="rightBarButtonItem" title="Articles" id="hfd-fX-Ao0">
+                            <connections>
+                                <segue destination="7Zt-6Z-I8i" kind="unwind" unwindAction="backToArticlesWithSegue:" id="Q2b-9E-Z2h"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="articleWebView" destination="1O2-4N-j3A" id="yTy-88-7EH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lf9-RG-vFN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="7Zt-6Z-I8i" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="7351" y="578"/>
         </scene>
@@ -514,7 +519,7 @@
         <scene sceneID="WWF-iE-aCH">
             <objects>
                 <tabBarController id="bh0-6i-2R8" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6nX-OD-UKk">
+                    <tabBar key="tabBar" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" id="6nX-OD-UKk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -551,7 +556,7 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CK8-9X-468">
                                                     <rect key="frame" x="0.0" y="0.0" width="83" height="69.5"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JtL-dI-YOL">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JtL-dI-YOL">
                                                     <rect key="frame" x="91" y="8" width="315" height="53.5"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -600,7 +605,7 @@
         <scene sceneID="BPP-tN-Am8">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Chx-Yo-9cY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Sources" id="bBi-z9-v5g"/>
+                    <tabBarItem key="tabBarItem" title="Sources" image="icons8-magazine-32" id="bBi-z9-v5g"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SaU-aX-Eqh">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -619,7 +624,7 @@
         <scene sceneID="hzb-7K-eyk">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9wX-ur-j3J" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Feed" id="JtO-6b-8ha"/>
+                    <tabBarItem key="tabBarItem" title="Feed" image="icons8-us-news-32" id="JtO-6b-8ha"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1vq-NE-c3g">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -638,7 +643,7 @@
         <scene sceneID="bOg-UZ-B0K">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Myw-oX-L9m" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" id="3AW-nb-aSm"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="icons8-settings-32" id="3AW-nb-aSm"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yJ7-6L-Vzv">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -654,8 +659,15 @@
             <point key="canvasLocation" x="1682.608695652174" y="960.9375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-add-user-male-32" width="32" height="32"/>
+        <image name="icons8-magazine-32" width="32" height="32"/>
+        <image name="icons8-settings-32" width="32" height="32"/>
+        <image name="icons8-us-news-32" width="32" height="32"/>
+        <image name="icons8-user-32" width="32" height="32"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BX6-gd-lth"/>
+        <segue reference="heS-OV-E25"/>
         <segue reference="B2c-bj-B0u"/>
     </inferredMetricsTieBreakers>
 </document>
