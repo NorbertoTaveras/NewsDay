@@ -32,4 +32,4 @@ Go to the [Releases](https://github.com/NorbertoTaveras/NewsDay/releases) to dow
 - [News API](https://newsapi.org/) - Locate articles and breaking news headlines from news sources and blogs across the web.
 
 ## Demo
-<img src="/Assets/NewsDay_Demo.gif" width="32%" />
+<img src="/Assets/Newsday_Demo.gif" width="32%" />
