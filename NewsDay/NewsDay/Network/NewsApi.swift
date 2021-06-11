@@ -10,7 +10,7 @@ import Foundation
 
 class NewsApi {
     private static let instance = NewsApi()
-    private static let apiKey = "233a012e69b84d55aacb08dc84f38f0d"
+    private static let apiKey = "e57307362d89480a8dc57479c75935ba"
     
     enum NewsError: Error {
         case invalidJSON

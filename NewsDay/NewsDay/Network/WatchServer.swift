@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import WatchKit
+
 import WatchConnectivity
 import Kingfisher
 
